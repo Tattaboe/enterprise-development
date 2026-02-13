@@ -19,10 +19,10 @@ jobs:
         dotnet-version: 8.0.x
     
     - name: Restore dependencies
-      run: dotnet restore Polyclinic.sln
+      run: dotnet restore Polyclinic/Polyclinic.sln
     
     - name: Build
-      run: dotnet build Polyclinic.sln --no-restore --configuration Release
+      run: dotnet build Polyclinic/Polyclinic.sln --no-restore --configuration Release
     
     - name: Test
-      run: dotnet test Polyclinic.sln --no-build --configuration Release --verbosity normal
+      run: dotnet test Polyclinic/Polyclinic.sln --no-build --configuration Release --verbosity normal
