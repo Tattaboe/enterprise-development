@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polyclinic.Domain.Enums;
+﻿namespace Polyclinic.Domain.Enums;
 
 /// <summary>
 /// Пол пациента
 /// </summary>
 public enum Gender
 {
+    /// <summary>
+    /// Не указано
+    /// </summary>
+    NotSet,
+
     /// <summary>
     /// Мужской
     /// </summary>
@@ -19,10 +18,5 @@ public enum Gender
     /// <summary>
     /// Женский
     /// </summary>
-    Female,
-
-    /// <summary>
-    /// Не указано
-    /// </summary>
-    Other
+    Female
 }

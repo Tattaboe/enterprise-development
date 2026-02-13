@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polyclinic.Domain.Enums;
+﻿namespace Polyclinic.Domain.Enums;
 
 /// <summary>
 /// Группа крови пациента
@@ -29,5 +23,5 @@ public enum BloodGroup
     /// <summary>
     /// Четвертая (AB)
     /// </summary>
-    AB
+    Ab
 }

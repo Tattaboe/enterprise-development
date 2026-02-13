@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Polyclinic.Domain.Enums;
-
-namespace Polyclinic.Domain.Entities;
+﻿namespace Polyclinic.Domain.Entities;
 
 /// <summary>
 /// Врач поликлиники
@@ -29,9 +21,9 @@ public class Doctor
     public required string FullName { get; set; }
 
     /// <summary>
-    /// Год рождения
+    /// Дата рождения
     /// </summary>
-    public int BirthYear { get; set; }
+    public DateTime BirthDate { get; set; }
 
     /// <summary>
     /// Идентификатор специализации
@@ -56,5 +48,10 @@ public class Doctor
     /// <summary>
     /// Вычисление возраста врача на указанную дату
     /// </summary>
-    public int GetAge(DateTime onDate) => onDate.Year - BirthYear;
+    public int GetAge(DateTime onDate)
+    {
+        var age = onDate.Year - BirthDate.Year;
+        if (BirthDate.Date > onDate.AddYears(-age)) age--;
+        return age;
+    }
 }

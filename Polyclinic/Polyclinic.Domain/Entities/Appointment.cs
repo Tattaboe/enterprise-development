@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polyclinic.Domain.Entities;
+﻿namespace Polyclinic.Domain.Entities;
 
 /// <summary>
 /// Запись пациента на прием к врачу
