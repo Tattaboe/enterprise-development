@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyclinic.Domain", "Polyclinic.Domain\Polyclinic.Domain.csproj", "{6C9C08E8-CE8E-422F-8BDC-E7B751E8E84A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyclinic.Tests", "Polyclinic.Tests\Polyclinic.Tests.csproj", "{0C24BBBB-C432-4776-9968-5DAD9432AB5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C9C08E8-CE8E-422F-8BDC-E7B751E8E84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9C08E8-CE8E-422F-8BDC-E7B751E8E84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9C08E8-CE8E-422F-8BDC-E7B751E8E84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9C08E8-CE8E-422F-8BDC-E7B751E8E84A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C24BBBB-C432-4776-9968-5DAD9432AB5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C24BBBB-C432-4776-9968-5DAD9432AB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C24BBBB-C432-4776-9968-5DAD9432AB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C24BBBB-C432-4776-9968-5DAD9432AB5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F0773E0-B943-4E7B-A2FB-1B30E6ADA139}
+	EndGlobalSection
+EndGlobal
