@@ -1,7 +1,7 @@
 ﻿using Polyclinic.Domain.Entities;
 using Polyclinic.Domain.Enums;
 
-namespace Polyclinic.Tests;
+namespace Polyclinic.Domain;
 
 /// <summary>
 /// Фикстура с тестовыми данными для поликлиники
@@ -19,9 +19,6 @@ public class PolyclinicFixture
         Doctors = GetDoctors();
         Patients = GetPatients();
         Appointments = GetAppointments();
-
-        LinkDoctorsWithSpecializations();
-        LinkAppointmentsWithDoctorsAndPatients();
     }
 
     private static List<Specialization> GetSpecializations() =>

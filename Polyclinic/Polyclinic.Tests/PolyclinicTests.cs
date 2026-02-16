@@ -1,4 +1,6 @@
-﻿namespace Polyclinic.Tests;
+﻿using Polyclinic.Domain;
+
+namespace Polyclinic.Tests;
 
 /// <summary>
 /// Тесты для поликлиники с использованием фикстуры
