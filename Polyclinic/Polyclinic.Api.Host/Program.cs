@@ -42,8 +42,6 @@ builder.Services.AddControllers()
     }); builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.UseInlineDefinitionsForEnums();
-
     var assemblies = AppDomain.CurrentDomain.GetAssemblies()
         .Where(a => a.GetName().Name!.StartsWith("Polyclinic"))
         .Distinct();
