@@ -10,6 +10,7 @@ using Polyclinic.Domain;
 using Polyclinic.Domain.Entities;
 using Polyclinic.Infrastructure.EfCore;
 using Polyclinic.Infrastructure.EfCore.Repositories;
+using Polyclinic.Infrastructure.RabbitMq;
 using Polyclinic.ServiceDefaults;
 using System.Text.Json.Serialization;
 
@@ -57,7 +58,13 @@ builder.Services.AddSwaggerGen(c =>
     c.UseInlineDefinitionsForEnums();
 });
 
-builder.AddSqlServerDbContext<PolyclinicDbContext>("ConnectionString");
+builder.AddSqlServerDbContext<PolyclinicDbContext>("DatabaseConnectionString");
+
+builder.AddRabbitMQClient("rabbitMqConnection");
+
+builder.Services.Configure<RabbitMqOptions>(builder.Configuration.GetSection("RabbitMq"));
+
+builder.Services.AddHostedService<AppointmentConsumer>();
 
 var app = builder.Build();
 

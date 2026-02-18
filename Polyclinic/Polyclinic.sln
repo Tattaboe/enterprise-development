@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyclinic.AppHost", "Polyc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyclinic.ServiceDefaults", "Polyclinic.ServiceDefaults\Polyclinic.ServiceDefaults.csproj", "{B3604DE1-E61C-254E-A2A2-7B3A153D5ED4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyclinic.Infrastructure.RabbitMq", "Polyclinic.Infrastructure.RabbitMq\Polyclinic.Infrastructure.RabbitMq.csproj", "{1DEF4446-AF07-4895-AEDE-4F5882D973FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyclinic.Generator.RabbitMq.Host", "Polyclinic.Generator.RabbitMq.Host\Polyclinic.Generator.RabbitMq.Host.csproj", "{94FCD14B-F3F3-1B4A-2038-FCA0812FAE18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{B3604DE1-E61C-254E-A2A2-7B3A153D5ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3604DE1-E61C-254E-A2A2-7B3A153D5ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3604DE1-E61C-254E-A2A2-7B3A153D5ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DEF4446-AF07-4895-AEDE-4F5882D973FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DEF4446-AF07-4895-AEDE-4F5882D973FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DEF4446-AF07-4895-AEDE-4F5882D973FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DEF4446-AF07-4895-AEDE-4F5882D973FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94FCD14B-F3F3-1B4A-2038-FCA0812FAE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FCD14B-F3F3-1B4A-2038-FCA0812FAE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FCD14B-F3F3-1B4A-2038-FCA0812FAE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FCD14B-F3F3-1B4A-2038-FCA0812FAE18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

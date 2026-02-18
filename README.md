@@ -1,4 +1,4 @@
-# Разработка корпоративных приложений. Лабораторные работы №1-3
+# Разработка корпоративных приложений. Лабораторные работы №1-4
 
 ## Лабораторная работа №1
 
@@ -71,6 +71,28 @@
 - База данных `PolyclinicDb`
 - API Host с зависимостью от БД
 
+## Лабораторная работа №4
+
+### Цель
+Реализация сервиса генерации контрактов с использованием брокера сообщений.
+
+### Реализация
+**Генератор записей (`Polyclinic.Generator.RabbitMq.Host`):**
+- Отдельное приложение без зависимостей от серверных проектов
+- `AppointmentGenerator` — генерация тестовых данных записей на прием
+- `AppointmentProducer` — отправка сообщений в очередь RabbitMQ
+- `GeneratorController` — API для управления генерацией
+
+**Инфраструктура RabbitMQ (`Polyclinic.Infrastructure.RabbitMq`):**
+- `AppointmentConsumer` — фоновый сервис чтения сообщений из очереди
+- `RabbitMqOptions` — конфигурация подключения к брокеру
+- Автоматическое сохранение полученных контрактов в БД
+
+**Aspire оркестратор (обновлен):**
+- RabbitMQ контейнер (`rabbitMqConnection`) с плагином управления
+- Генератор (`polyclinic-generator`) с зависимостью от RabbitMQ
+- API Host с зависимостями от SQL Server и RabbitMQ
+
 ## Структура проекта
 
 ```
@@ -134,6 +156,19 @@ Polyclinic (Solution)
 │       ├── DoctorController.cs
 │       ├── PatientController.cs
 │       └── SpecializationController.cs
+│
+├── Polyclinic.Infrastructure.RabbitMq (Class Library) - Интеграция с RabbitMQ
+│   ├── AppointmentConsumer.cs
+│   └── RabbitMqOptions.cs
+│
+├── Polyclinic.Generator.RabbitMq.Host (ASP.NET Core) - Генератор контрактов
+│   ├── Program.cs
+│   ├── Controllers/
+│   │   └── GeneratorController.cs
+│   ├── Services/
+│   │   ├── AppointmentGenerator.cs
+│   │   └── AppointmentProducer.cs
+│   └── Options/
 │
 ├── Polyclinic.AppHost (Aspire Host) - Оркестратор
 │   └── AppHost.cs
